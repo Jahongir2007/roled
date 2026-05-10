@@ -8,7 +8,7 @@ npm install roled
 ```
 or CDN:
 ```html
-<script src="roledjs.js"></script>
+<script type="module" src="https://jahongir2007.github.io/roled/src/index.js"></script>
 ```
 
 ## 🧠 Core Concept
