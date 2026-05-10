@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoledJS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css"
+    rel="stylesheet"
+    />
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center px-6">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-transparent to-cyan-500/20 blur-3xl"></div>
+
+    <div class="relative max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm mb-6">
+          <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+          Role-driven reactive framework
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black leading-tight">
+          Build UI with
+          <span class="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">
+            Roles
+          </span>
+        </h1>
+
+        <p class="mt-6 text-zinc-400 text-lg leading-relaxed max-w-xl">
+          RoledJS is a lightweight reactive JavaScript framework where behavior is attached through roles instead of heavy components.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-10">
+          <button
+            roled-role="heroButton"
+            class="hero-btn px-8 py-4 rounded-2xl bg-white text-black font-semibold transition-all duration-300"
+          >
+            Explore RoledJS
+          </button>
+
+          <button class="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300">
+            GitHub
+          </button>
+        </div>
+
+        <div class="flex gap-8 mt-14 text-sm text-zinc-500">
+          <div>
+            <div class="text-3xl text-white font-bold">3kb</div>
+            Tiny Core
+          </div>
+
+          <div>
+            <div class="text-3xl text-white font-bold">0</div>
+            Virtual DOM
+          </div>
+
+          <div>
+            <div class="text-3xl text-white font-bold">100%</div>
+            Reactive
+          </div>
+        </div>
+      </div>
+
+      <!-- CODE CARD -->
+      <div class="relative">
+        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-indigo-500 blur opacity-40"></div>
+
+        <div class="relative rounded-3xl border border-white/10 bg-zinc-900/80 backdrop-blur overflow-hidden shadow-2xl">
+          <div class="flex items-center gap-2 px-5 py-4 border-b border-white/10 bg-black/20">
+            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+
+          <pre class="p-6 overflow-x-auto text-sm leading-7 text-zinc-300">
+<code class="language-javascript">
+new Role("counter", {
+  state: {
+    count: 0
+  },
+
+  mount(el, state){
+    el.on("click", () => {
+      state.count++
+    })
+  },
+
+  effect(el, state){
+    el.text(`Count: ${state.count}`)
+  }
+})
+</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="px-6 pb-32">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-20">
+        <div class="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+          Features
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-black mt-4">
+          Why developers will love RoledJS
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 hover:-translate-y-2 transition-all duration-300">
+          <div class="text-4xl mb-5">⚡</div>
+          <h3 class="text-2xl font-bold mb-4">Reactive Core</h3>
+          <p class="text-zinc-400 leading-relaxed">
+            Built with dependency tracking and reactive effects powered by JavaScript Proxy.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 hover:-translate-y-2 transition-all duration-300">
+          <div class="text-4xl mb-5">🧩</div>
+          <h3 class="text-2xl font-bold mb-4">Role Architecture</h3>
+          <p class="text-zinc-400 leading-relaxed">
+            Attach behavior directly to HTML using clean role-driven APIs.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 hover:-translate-y-2 transition-all duration-300">
+          <div class="text-4xl mb-5">🚀</div>
+          <h3 class="text-2xl font-bold mb-4">Tiny & Fast</h3>
+          <p class="text-zinc-400 leading-relaxed">
+            No virtual DOM. No compiler. Just fast reactive JavaScript.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE COUNTER -->
+  <section class="px-6 pb-32">
+    <div class="max-w-3xl mx-auto text-center rounded-[40px] border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-16">
+
+      <div class="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+        Interactive Demo
+      </div>
+
+      <h2 class="text-5xl font-black mt-5">
+        Reactive Counter
+      </h2>
+
+      <p class="text-zinc-400 mt-6 text-lg">
+        This counter is powered by RoledJS reactivity.
+      </p>
+
+      <div roled-role="counter" class="mt-12">
+        <div class="counter-text text-7xl font-black">0</div>
+
+        <button class="increment mt-8 px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition-all duration-300 text-black font-bold">
+          Increment
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10 px-6 text-center text-zinc-500">
+    Built with ❤️ using RoledJS
+  </footer>
+
+  <script src="./roled.js"></script>
+  <script>
+    new Role("counter", {
+        state: {
+            count: 0
+        },
+
+        mount(el, state){
+            el.find(".increment").on("click", () => {
+                state.count++
+            })
+
+            const heroButton = document.querySelector(".hero-btn")
+
+            heroButton.addEventListener("mouseenter", () => {
+                heroButton.style.transform = "scale(1.05)"
+            })
+
+            heroButton.addEventListener("mouseleave", () => {
+                heroButton.style.transform = "scale(1)"
+            })
+        },
+
+        effect(el, state){
+            el.find(".counter-text")
+              .text(state.count)
+        }
+    })
+
+    new Role("heroButton", {
+        state: {
+            hovered: false
+        },
+
+        mount(el, state){
+            el.on("mouseenter", () => {
+                state.hovered = true
+            })
+
+            el.on("mouseleave", () => {
+                state.hovered = false
+            })
+        },
+
+        effect(el, state){
+            if(state.hovered){
+                el.css({
+                    transform: "scale(1.05)",
+                    boxShadow: "0 0 40px rgba(255,255,255,0.3)"
+                })
+            }else{
+                el.css({
+                    transform: "scale(1)",
+                    boxShadow: "none"
+                })
+            }
+        }
+    })
+
+    start()
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+</body>
+</html>
